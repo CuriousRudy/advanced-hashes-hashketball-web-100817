@@ -37,7 +37,21 @@ def num_points_scored(name) #working
         end
         points_scored
 end
-    
+
+=begin
+def num_points_scored(player)
+ [:points] }
+end
+ 
+ def get_all_players   <- access an array of the hashes of player information
+ players = game_hash.values.map {|team| team[:players] }.flatten  <-by flattening our hashes of information of the player_info
+ end
+ 
+def find_the_player(player, player_name)
+ players.find {|player_hash| player_hash[:player_name] == player_name }
+end
+ 
+=end
     
     
 def player_numbers(name) #working
@@ -135,7 +149,6 @@ def big_shoe_rebounds #working
                     end
                 end
             end
-    
         end
     athlete = big_shoe_hash.max_by {|k,v| v } #find the max shoe size from our big_shoe_has
     player_stats(athlete[0])[:rebounds]  #and use our player stats to pull stats from game_hash using the :rebounds key
@@ -155,7 +168,6 @@ def most_points_scored
                 end
             end
         end
-        
     end
     athlete = ppg_hash.max_by {|k,v| v } #find the highest scorer from our ppg_hash
     athlete[0] #since max_by returns an array with the key and value, we can use the 0 index to access only the key
